@@ -1,0 +1,35 @@
+@mixin center-hor {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+
+@mixin visible-sm{
+               @include media($tablet) { 
+      visibility:visible;
+      display: block;
+      
+}
+}
+
+@mixin visible-md{
+               @include media($laptop) { 
+      visibility:visible;
+            display: block;
+}
+}
+
+@mixin visible-lg{
+               @include media($desktop) { 
+      visibility:visible;
+            display: block;
+}
+}
+
+@mixin non-mobile{
+       @include media($desktop);
+         @include media($laptop);
+         @include media($tablet);
+}

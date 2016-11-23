@@ -1,0 +1,183 @@
+.main-header{
+    overflow-y: hidden;
+    height:420px;
+    @include media($laptop){
+        height:auto;
+        margin-top:30px;
+    }
+}
+
+.logo-mobile {
+    float:left;
+    width: 40px;
+    height: 40px;
+    background-image: url("img/lg.png");
+    background-position: center top, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title-mobile{
+    float:right;
+    color:black;
+    font-weight: 900;
+    padding-top:10px;
+    width: 100px;
+    text-transform: uppercase;
+}
+.logo1{
+    width: 10%;
+    height:0px;
+    display: inline-block;
+    float:left;
+    background-color: black;
+    background-image: url("img/lg.png");
+    background-position: center top, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    @include visible-lg;
+    @include visible-md;
+    @include media($laptop) { 
+        height: 100px;
+    }
+    @include media($desktop) { 
+        height: 100px;
+    }
+}
+.header-wrapper{
+    @include media($desktop) {   
+    }
+    @include outer-container;
+    @include center-hor;
+}
+.header-container{
+    @include outer-container;
+    margin-top: 5px;
+    height: 380px;
+    @include media($laptop){
+        margin-top:30px;
+    }
+}
+.header-slider{
+    cursor: pointer;
+    position: relative;
+    &:hover{
+        .next-main, .prev-main{
+          i{
+        color:whitesmoke;
+          }
+        }
+    }
+    @include media($laptop){
+        @include span-columns(14);
+    }
+}
+.prime-slider{ 
+}
+.next-main, .prev-main{
+    i{
+          @include transition(all 0.5s ease-in-out);
+        color:transparent;
+    }
+        font-size:20px;
+        position: absolute;
+        top:150px;
+        z-index: 1000;
+        right:30px;
+        @include media($laptop){
+            top:240px;
+        }
+}
+.prev-main{
+       left:30px;
+       right:auto;
+}
+.item{
+    background-position: center top, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:370px;
+    margin: 0;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    &:hover{
+        .slide-text{
+
+            span{
+                color:white;
+            }
+        }
+    }
+    @include media($laptop){
+        height:430px; 
+    }
+    @include media($desktop){
+        height:490px; 
+    }
+}
+.item1 {
+    background-image: url("img/snowboard-banner.jpg");
+}
+.item2{
+    background-image: url("img/ski-banner.jpg");
+}
+.item3{
+    background-image: url("img/snowboard-banner.jpg");
+}
+.owl-carousel{
+    margin-top:0px;
+}
+.slide-text{
+    @include transition(all 0.6s ease-in-out);
+    margin: 0;
+    padding-top: 0;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height:100%; 
+    font-weight: 700;
+    font-size:16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include center-hor;
+    color:white;
+    background: -webkit-linear-gradient(90deg, #bababa 0%, #6f878f 100%);
+    background: -moz-linear-gradient(90deg, #bababa 0%, #6f878f 100%);
+    background: -o-linear-gradient(90deg, #bababa 0%, #6f878f 100%);
+    background: -ms-linear-gradient(90deg, #bababa 0%, #6f878f 100%);
+    background: linear-gradient(0deg, #bababa 0%, #6f878f 100%);
+    opacity:0.4;
+    padding-top:1vw;
+
+    span{
+        @include transition(color 0.6s ease-in-out);
+        color:white;
+    }
+}
+
+.owl-theme .owl-controls .owl-page span {
+
+}
+
+.slider-wrapper{
+    background-color: white;    
+}
+.slider-title{
+
+}
+.customNavigation{
+    margin-top:40px;
+    //use styles below to disable ugly selection
+    .customNavigation a{
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+

@@ -1,0 +1,112 @@
+
+.aside-banners{ 
+    @include media($laptop){ 
+    @include span-columns(4);
+    } 
+}
+
+.widget-banner,
+.elevation-banner,
+.articles-banner,
+.goals-banner,
+.measure-banner{
+    margin-top:30px;
+  display:none;
+    visibility: hidden;
+    @include visible-md;
+    @include visible-lg;
+}
+.widget-banner{
+ 
+    @include media($laptop){
+    margin-top:0;
+    padding:10px;
+    }
+min-height: 330px;
+}
+.widget-link{
+    @include media($laptop){
+    padding:2.5px;
+    background-color: #e9e9e9;
+    display: inline-block;
+    margin:5px;
+    font-size:10px;
+    font-weight: 300;
+    cursor:pointer;
+    &:hover{
+       background-color: #faef03;
+       font-weight: 900;
+    }
+ 
+}
+     @include media($desktop){
+       font-size:12px;
+}
+}
+.elevation-banner{
+   
+}
+.aside-img{
+        @include media($laptop){
+        padding-top:225px;
+        padding-bottom:30px;
+        @include center-hor;
+        max-width: 190px;
+}
+}
+.goals-banner{
+   .aside-img{
+           @include media($laptop){
+        padding-top:30px;
+        padding-bottom: 225px;
+           }
+} 
+}
+.aside-title{
+     p{
+             @include media($laptop){
+        text-align: center;
+        padding:10px;
+             }
+    }
+}
+.articles-link{ 
+        @extend .widget-link;
+        @include media($laptop){
+     display:block;
+     background-color: white;   
+        }
+}
+.elevation-banner, .measure-banner{
+    background-color: black;
+}
+.articles-banner{
+    background-color: white;
+    @include media($laptop){
+ padding:25px;
+    }
+}
+.elevation-banner,
+.goals-banner,
+.measure-banner{
+   
+}
+.goals-banner, .widget-banner{
+    background-color: white;
+}
+.measure-banner{
+    margin-top:0;
+}
+ 
+.banner-xs{
+    @extend .visible-tablet;
+    padding:10px;
+    background-color:black;
+    height:150px;
+    img{
+        margin-top:20px;
+        height: 100px;
+       margin-left:20px;
+       margin-right: auto;
+    }
+}

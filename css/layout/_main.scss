@@ -1,0 +1,189 @@
+.main-wrapper{
+    @include outer-container;
+}
+main{
+    @include media($laptop){
+        @include span-columns(14);
+    }
+}
+//slider
+.owl-pagination{
+    display:none;
+}
+.slider-nav{
+    position: relative;
+    height:50px;
+}
+
+.new-products{
+    .product-img{
+       
+    }
+}
+.featured-wrapper, .bestseller-wrapper{
+    @extend .slider-wrapper;
+    margin-top:30px;
+}
+
+.slider-title, .prev-new, .next-new{
+    position: absolute;
+    top:15px;
+    cursor: pointer;
+}
+.slider-title{
+    left:25px;
+}
+.prev-new{
+    right:40px;
+    .icon-left-open{
+        color: #999999;
+    }
+}
+.next-new{
+    right:15px;   
+}
+.prev-new, .next-new{
+  font-weight: 900;  
+  i{
+      font-size:17px;   
+        font-weight: 900; 
+  }
+
+}
+.next-best, .next-feat{
+    @extend .next-new;
+}
+.prev-best, .prev-feat{
+    @extend .prev-new;
+}
+.sell-box-container{
+    width: 100%;
+}
+
+.banner-box{
+    height: 202px;
+     @include media($desktop){
+  height: 235px;
+
+     }
+    display: inline-block;
+    float:left;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom: 10px;  
+    background-color: white;
+    p{
+        padding-top:30px;
+        text-align: center;
+    }
+}
+.banner-title{
+    @include center-hor;
+    font-size:50px;
+    cursor:default;
+    font-style:italic;
+}
+.banner-box-container{
+    background-color: white;
+}
+.product-img{  
+    height:130px;
+    width: 100%;
+        @include media ($mobile-lg){
+            height:150px; 
+        }
+        @include media ($tablet){
+                height:200px; 
+        }
+        @include media ($laptop){
+            height: 250px;
+        }
+        @include media ($desktop){
+            height: 250px;
+        }
+    img{
+        padding:3vw;
+        height:130px;
+        width: 130px;
+        @include center-hor;
+            @include media ($mobile-lg){
+            height:150px; 
+            width: 150px;
+        }
+        @include media ($tablet){
+                height:200px; 
+                width:200px;         
+        }
+        @include media ($laptop){
+            height: 250px;
+            width: 250px;
+             padding:25px;
+        }
+    }
+}
+.sell-box{
+    height:180px;
+    width: 100%;
+     @include media ($mobile-lg){
+            height:200px; 
+        }
+        @include media ($tablet){
+                height:250px; 
+        }
+        @include media ($laptop){
+            height: 320px;
+        }
+        @include media ($desktop){
+            height: 320px;
+        }
+}
+
+.product-name, .product-type, .product-price{
+  @include media($xs){
+    left:10px;
+    }
+    font-size:11px;
+    letter-spacing: 0.5px;
+    position:absolute;
+    left:30px;
+    top:10px;
+    @include media($laptop){
+        left:30px;
+        font-size:13px;
+        letter-spacing: 1px;
+    }
+}
+.sell-footer{
+    position:relative;
+    @include media($laptop){
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+}
+.product-name{
+}
+.product-type{
+    top:15px;
+    @include media($laptop){
+        font-size:13px;
+        letter-spacing: 1px;
+    }
+}
+.product-price{
+         font-size:13px;
+          right:40px;
+    left:auto;
+    font-style: italic;
+    @include media($xs){
+    font-size:13px;
+    right:10px;
+    }
+    
+    @include media($tablet){
+        font-size:23px;
+    }
+      @include media($laptop){
+       right:50px;
+    }
+}
+

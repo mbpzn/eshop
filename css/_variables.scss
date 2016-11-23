@@ -1,0 +1,17 @@
+
+@import "vendor/neat/neat-helpers";
+
+
+$column: 90px;
+$gutter: 50px;
+$grid-columns: 16;
+$max-width: 1250px;
+$xs: new-breakpoint(max-width 480px 18);
+$mobile: new-breakpoint(min-width 620px 18);
+$mobile-lg: new-breakpoint(min-width 480px 18);
+$tablet: new-breakpoint(min-width 620px 18);
+$laptop: new-breakpoint(min-width 991px 18);
+
+$desktop: new-breakpoint(min-width 1151px 18);
+$desktop-lg: new-breakpoint(min-width 1265px 18);
+$desktop-f: new-breakpoint(min-width 1151px 12);

@@ -1,0 +1,258 @@
+
+.about, .twitter, .facebook{
+    width: 100%;
+}
+
+.page-footer{
+    margin-top:20px;
+    width: 100%;
+    max-width: 1250px;
+    @include center-hor;
+    background-color:  #222429;
+    overflow: hidden;
+}
+.about{
+        padding-bottom: 30px;
+    display:inline-block;
+    margin-left:0;
+    margin-right:0;
+    background-color: #fff;
+    float:left;
+    .footer-title,.footer-content{
+        color:black;
+        max-width: 90%;
+    }
+    .footer-content{
+        font-family:arial, sans-serif;
+        font-weight: bolder;
+        text-align: justify;  
+    -moz-text-align-last: right;
+    text-align-last: left;
+    padding:10px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    @include media($tablet){
+        width: 100%;
+    }
+    @include media($laptop){
+        width: 50%;
+        height:301px;
+    }
+}
+
+.twitter{
+    @include media($mobile){
+        .footer-content{
+            @include center-hor;
+        }   
+    }
+    padding-bottom: 20px;
+    display:inline-block;
+    float:left;
+    background-color: #3fccfd;
+    @include media($tablet){
+        height:285px;
+        width: 50%;
+    }
+    @include media($laptop){
+        width: 25%;
+        height:301px;
+    }
+}
+.twitt-post{
+    position: relative;
+    height: 119px;
+}
+.twitt-content,.twitt-time,.twitter-post-icon{
+    position: absolute;
+    left:10px;
+    padding:0;
+    color:white;
+    margin:0;
+    padding:0;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    left:20px;
+}
+.twitt-content{
+    top:30px;
+}
+.twitter-post-icon{
+    top:22px;
+    left:17px;
+}
+.twitt-time{
+    top:80px;
+    font-style:italic;
+}
+.facebook{
+    .footer-content{
+       margin-left: 20px;
+    }
+    float:left;
+    margin:0;
+    display:inline-block;
+    background-color: #4966b6;
+    padding-bottom: 20px;
+    @include media($tablet){
+        width: 50%;
+        height:285px;
+    }
+    @include media($laptop){
+        width: 25%;
+        height:301px;
+    }
+}
+.facebook-profile{
+    .profile-picture{
+        height:37px;
+        width: 37px;
+        background-color: #274d99;
+    }
+    .profile-name{
+        font-size:9px; 
+        margin:0;
+        padding:0;
+        color:white;
+    }
+    display: inline-block;
+    width: 40px;
+    margin:1%;
+    @include media($desktop){
+        .profile-picture{
+            height:40px;
+            width: 40px;
+        }
+        margin:1.5%;
+    }
+}
+.footer-box{
+    width: 100%;
+}
+.category, .customer-service, .my-account, .newsletter{
+    display: inline-block;
+    float:left;
+    background-color:  #222429;
+    background-color:  transparent;
+    width: 50%;
+    @include media($laptop){
+        width: 25%;
+        height:200px;
+    }
+}
+.clearfix-footer{
+    clear: both;
+    @include media($laptop){
+        display: none;
+    }
+}
+.footer-box-link{
+    display: block;
+    color:  rgba(153, 153, 153, 0.7);
+    text-decoration: none;
+    margin-left:8%;
+    width: 150px;
+    text-align: left;
+}
+.footer-title{
+    color:white;
+    font-size:18px;
+    letter-spacing: 1px;
+    font-style:italic; 
+    text-align: left;
+    margin-left:20px;
+}
+.footer-content{
+    color:white;
+    margin:0;
+    padding:0;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-family: Roboto;
+}
+
+
+.copyright{
+    height: 59px;
+    width: 100%;
+    background-color: #000009;
+    p{
+        padding:15px;
+        font-family: Roboto;
+        color:  #f9f9f9;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+    }
+}
+.subscribe-form{
+    position:relative;
+    input{
+        height: 24px;
+        width: 70%;
+        position: absolute;
+        left:10px;
+        border:none;
+        background-color:  #050506;
+        font-family: Roboto;
+        color:  rgba(153, 153, 153, 0.7);
+        font-size: 14px;
+        font-style: italic;
+        text-align: left;
+        padding-left:20px;
+        @include media($tablet){
+            height: 34px;
+            width: 200px;
+        }
+    }
+    button{
+        position: absolute;
+        left:70%;
+        height: 24px;
+        width:34px;
+        background-color:#faef03;
+        border:none;
+        @include media($tablet){
+            height: 34px;
+            width:34px;
+            left:200px;
+        }
+    }
+
+}
+.newsletter{
+    .footer-content{
+        font-family: Roboto;
+        color:  rgba(153, 153, 153, 0.7);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        padding:10px;
+        max-width: 255px;
+    }
+}
+.socials-footer{
+    display: block;
+    float:none;
+    margin-top:50px;
+    margin-left:10px;
+
+}
+.social-box{
+    float:left;
+    background-color:  #050506;
+    height: 26px;
+    padding-top:3px;
+    width: 26px;
+    margin:2px;
+    i{
+        color:lightgray;
+
+    }
+}

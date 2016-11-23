@@ -1,0 +1,16 @@
+body{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: $font1; 
+    @include media($laptop){
+    background-color: #DBDFE2;
+    }
+}
+.visible-tablet{
+    @include media($laptop){
+        visibility: hidden;
+        display:none;
+    }
+}
+
